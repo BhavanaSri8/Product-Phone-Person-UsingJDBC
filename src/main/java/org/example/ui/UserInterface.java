@@ -37,12 +37,12 @@ public class UserInterface {
 
                 case 2:
                     System.out.print("Enter First Name: ");
-                    String fname = sc.nextLine();
+                    String fname = sc.next();
 
                     System.out.print("Enter Last Name: ");
-                    String lname = sc.nextLine();
+                    String lname = sc.next();
 
-                    Person p = new Person(0, fname, lname);
+                    Person p = new Person(fname, lname);
                     dao.addPerson(p);
                     break;
 

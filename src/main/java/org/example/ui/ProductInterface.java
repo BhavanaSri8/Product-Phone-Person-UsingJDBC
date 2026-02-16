@@ -33,7 +33,7 @@ public class ProductInterface {
 
             System.out.print("Enter choice: ");
             int choice=sc.nextInt();
-
+            sc.nextLine();
 
             switch(choice){
                 case 1:
@@ -52,6 +52,7 @@ public class ProductInterface {
                     System.out.println("\nFilter By Rating: ");
                     System.out.println("Enter Product Rating: ");
                     int r=sc.nextInt();
+                    sc.nextLine();
                     List<Product> ra=pdoa.filterByRating(r);
                     ra.stream().forEach(System.out::println);
                     break;
@@ -63,6 +64,7 @@ public class ProductInterface {
                     category.stream().forEach(System.out::println);
                     break;
                 case 5:
+                    System.out.println("\nFilter By Brand: ");
                     System.out.println("Enter Brand: ");
                     String s1=sc.nextLine();
                     List<Product> brand=pdoa.filterByBrand(s1);
@@ -71,12 +73,14 @@ public class ProductInterface {
                 case 6:
                     System.out.println("Enter Min Cost: ");
                     int m1=sc.nextInt();
+                    sc.nextLine();
                     List<Product> mini=pdoa.filterByMinCost(m1);
                     mini.stream().forEach(System.out::println);
                     break;
                 case 7:
                     System.out.println("Enter Max Cost: ");
                     int m2=sc.nextInt();
+                    sc.nextLine();
                     List<Product> maxi=pdoa.filterByMaxCost(m2);
                     maxi.stream().forEach(System.out::println);
                     break;
@@ -113,18 +117,18 @@ public class ProductInterface {
                 case 14:
 
                     System.out.println("\nEnter Product Name: ");
-                    String name=sc.next();
+                    String name=sc.nextLine();
 
 
                     System.out.println("\nEnter Cost: ");
                     Double cost=sc.nextDouble();
 
                     System.out.println("\nEnter Brand: ");
-                    String br=sc.next();
+                    String br=sc.nextLine();
 
 
                     System.out.println("\nEnter Category: ");
-                    String cate=sc.next();
+                    String cate=sc.nextLine();
 
 
                     System.out.println("\nEnter Discount Percentage: ");
@@ -132,7 +136,7 @@ public class ProductInterface {
 
                     System.out.println("\nEnter Rating: ");
                     int rate=sc.nextInt();
-
+                    sc.nextLine();
 
                     pdoa.addProduct(new Product(name,cost,br,cate,dis,rate));
                     break;
